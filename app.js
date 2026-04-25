@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Gemini setup
-const genAI = new GoogleGenerativeAI("AIzaSyA0SddK36mGvAljFmgo27tibumrFksMIco");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 // ✅ Get all products (for frontend)
 app.get("/products", (req, res) => {
